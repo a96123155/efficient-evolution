@@ -42,5 +42,5 @@ if __name__ == '__main__':
         alpha=args.alpha,
     )
     for k, v in sorted(mutations_models.items(), key=lambda item: -item[1]):
-        mut_str = f'{k[1]}{k[0] + 1}{k[2]}'
+        mut_str = f'{k[0]}-{k[1]}:{k[3]}{k[2] + 1}{k[4]}'
         print(f'{mut_str}\t{v}')
