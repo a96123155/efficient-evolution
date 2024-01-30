@@ -200,7 +200,7 @@ def diff(seq_old, seq_new, start=0, end=None):
         if ch_new == '.':
             continue
         if ch_old != ch_new:
-            different_muts.append((idx, ch_old, ch_new))
+            different_muts.append((seq_old, seq_new, idx, ch_old, ch_new))
     return different_muts
     
 def reconstruct_multi_models(
