@@ -10,10 +10,7 @@ class FBModel(object):
 
         with warnings.catch_warnings():
             warnings.simplefilter('ignore', UserWarning)
-            if name.startswith('esm2'):
-                model, alphabet = pretrained.load_model_and_alphabet_hub(name)
-            else:
-                model, alphabet = pretrained.load_model_and_alphabet(name)
+            model, alphabet = pretrained.load_model_and_alphabet(name)
 
         model.eval()
         if torch.cuda.is_available():
