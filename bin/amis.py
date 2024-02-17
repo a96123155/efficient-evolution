@@ -46,6 +46,7 @@ def get_model(args):
     return model
 
 def get_model_name(name):
+    print(name)
     if name == 'esm1b':
         from fb_model import FBModel
         model = FBModel(
