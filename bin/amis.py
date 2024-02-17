@@ -25,6 +25,18 @@ def get_model(args):
             'esm_msa1_t12_100M_UR50S',
             repr_layer=[-1],
         )
+    elif args.model_name == 'esm2_t36':
+        from fb_model import FBModel
+        model = FBModel(
+            'esm2_t36_3B_UR50D',
+            repr_layer=[-1],
+        )
+    elif args.model_name == 'esm2_t48':
+        from fb_model import FBModel
+        model = FBModel(
+            'esm2_t48_15B_UR50D',
+            repr_layer=[-1]
+        )
     elif args.model_name == 'prose':
         from prose_model import ProseModel
         model = ProseModel()
