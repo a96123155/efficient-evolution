@@ -64,9 +64,34 @@ def get_model_name(name):
             'esm_msa1_t12_100M_UR50S',
             repr_layer=[-1],
         )
+    elif name == 'esm2_t48':
+        from fb_model import FBModel
+        model = FBModel('esm2_t48_15B_UR50D',
+            repr_layer=[-1],
+                       )
     elif name == 'esm2_t36':
         from fb_model import FBModel
         model = FBModel('esm2_t36_3B_UR50D',
+            repr_layer=[-1],
+                       )
+    elif name == 'esm2_t33':
+        from fb_model import FBModel
+        model = FBModel('esm2_t33_650M_UR50D',
+            repr_layer=[-1],
+                       )
+    elif name == 'esm2_t30':
+        from fb_model import FBModel
+        model = FBModel('esm2_t30_150M_UR50D',
+            repr_layer=[-1],
+                       )
+    elif name == 'esm2_t12':
+        from fb_model import FBModel
+        model = FBModel('esm2_t12_35M_UR50D',
+            repr_layer=[-1],
+                       )
+    elif name == 'esm2_t6':
+        from fb_model import FBModel
+        model = FBModel('esm2_t6_8M_UR50D',
             repr_layer=[-1],
                        )
     elif name == 'prose':
@@ -229,7 +254,12 @@ def reconstruct_multi_models(
             'esm1v3',
             'esm1v4',
             'esm1v5',
+            'esm2_t48',
             'esm2_t36',
+            'esm2_t33',
+            'esm2_t30',
+            'esm2_t12',
+            'esm2_t6',
         ],
         alpha=None,
         return_names=False,
