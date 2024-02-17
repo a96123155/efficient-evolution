@@ -64,6 +64,11 @@ def get_model_name(name):
             'esm_msa1_t12_100M_UR50S',
             repr_layer=[-1],
         )
+    elif name == 'esm2_t36':
+        from fb_model import FBModel
+        model = FBModel('esm2_t36_3B_UR50D',
+            repr_layer=[-1],
+                       )
     elif name == 'prose':
         from prose_model import ProseModel
         model = ProseModel()
@@ -224,6 +229,7 @@ def reconstruct_multi_models(
             'esm1v3',
             'esm1v4',
             'esm1v5',
+            'esm2_t36',
         ],
         alpha=None,
         return_names=False,
